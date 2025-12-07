@@ -45,3 +45,9 @@ The backend also implements **JWT authentication** for secure access to protecte
 ```bash
 git clone https://github.com/yourusername/expernetic-project.git
 cd backend
+2. **Install Depedencies**
+dotnet restore
+3. **Update Database**
+dotnet ef database update
+4.**Run  the Application**
+dotnet run
