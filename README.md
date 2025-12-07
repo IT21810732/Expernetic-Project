@@ -12,12 +12,6 @@ The backend also implements **JWT authentication** for secure access to protecte
 - [Technologies](#technologies)
 - [Features](#features)
 - [Setup](#setup)
-- [Database](#database)
-- [API Endpoints](#api-endpoints)
-- [Authentication](#authentication)
-- [Future Frontend Integration](#future-frontend-integration)
-- [Contributing](#contributing)
-- [License](#license)
 
 ---
 
