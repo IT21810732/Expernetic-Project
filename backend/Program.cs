@@ -14,7 +14,7 @@ builder.Services.AddDbContext<LibraryContext>(options =>
 builder.Services.AddControllers();
 
 // JWT
-var key = Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"]!); // null-forgiving here
+var key = Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"]!); 
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
     .AddJwtBearer(o =>
     {
