@@ -52,5 +52,5 @@ dotnet restore
 3. **Update Database**
 dotnet ef database update
 
-4.**Run  the Application**
+4. **Run  the Application**
 dotnet run
