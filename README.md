@@ -26,7 +26,7 @@ The backend also implements **JWT authentication** for secure access to protecte
 - **Entity Framework Core**
 - **SQLite**
 - **JWT (JSON Web Token)** for authentication
-- **C# **
+- **C#**
 
 ---
 
@@ -42,12 +42,15 @@ The backend also implements **JWT authentication** for secure access to protecte
 ## Setup
 
 1. **Clone the repository**
-```bash
+```bash```
 git clone https://github.com/yourusername/expernetic-project.git
 cd backend
-2. **Install Depedencies**
+```bash```
+3. **Install Depedencies**
 dotnet restore
-3. **Update Database**
+```bash```
+4. **Update Database**
 dotnet ef database update
-4.**Run  the Application**
+```bash```
+5.**Run  the Application**
 dotnet run
