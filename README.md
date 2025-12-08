@@ -47,7 +47,7 @@ register, login, view books, and perform CRUD operations on books after authenti
  dotnet restore
  ```
 4. Create appsettings.json manually in the backend root directory (replace placeholders with your own values):
-// appsettings.json
+```bash
 {
   "ConnectionStrings": {
     "DefaultConnection": "Data Source=YOUR_DATABASE_FILE.db"
@@ -60,8 +60,9 @@ register, login, view books, and perform CRUD operations on books after authenti
   },
   "AllowedHosts": "*"
 }
-5.Create appsettings.Development.json manually in the root directory (optional, for development logging):
-// appsettings.Development.json
+```
+5. Create appsettings.Development.json manually in the root directory (optional, for development logging):
+```bash
 {
   "Logging": {
     "LogLevel": {
@@ -70,6 +71,7 @@ register, login, view books, and perform CRUD operations on books after authenti
     }
   }
 }
+```
 6. **Apply migrations:**
  ```bash
  dotnet ef migrations add InitialCreate
