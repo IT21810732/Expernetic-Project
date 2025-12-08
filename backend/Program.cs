@@ -27,6 +27,7 @@ builder.Services.AddCors(options =>
 });
 
 // JWT
+var key = Encoding.ASCII.GetBytes(builder.Configuration["Jwt:Key"]);
 
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
     .AddJwtBearer(o =>
