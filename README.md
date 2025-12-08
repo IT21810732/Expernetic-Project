@@ -46,12 +46,36 @@ register, login, view books, and perform CRUD operations on books after authenti
  ```bash
  dotnet restore
  ```
-4. **Apply migrations:**
+4. Create appsettings.json manually in the backend root directory (replace placeholders with your own values):
+// appsettings.json
+{
+  "ConnectionStrings": {
+    "DefaultConnection": "Data Source=YOUR_DATABASE_FILE.db"
+  },
+  "Jwt": {
+    "Key": "YOUR_SECRET_JWT_KEY",
+    "Issuer": "YOUR_ISSUER",
+    "Audience": "YOUR_AUDIENCE",
+    "ExpiryMinutes": 60
+  },
+  "AllowedHosts": "*"
+}
+5.Create appsettings.Development.json manually in the root directory (optional, for development logging):
+// appsettings.Development.json
+{
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft.AspNetCore": "Warning"
+    }
+  }
+}
+6. **Apply migrations:**
  ```bash
  dotnet ef migrations add InitialCreate
  dotnet ef database update
  ```
-5. **Run the backend server:**
+7. **Run the backend server:**
  ```bash
  dotnet run
  ```
