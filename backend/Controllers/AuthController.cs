@@ -59,7 +59,6 @@ namespace backend.Controllers
 
         private string GenerateToken(User user)
         {
-            // null-forgiving operator (!) to remove warnings
             var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_config["Jwt:Key"]!));
             var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
 
