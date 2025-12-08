@@ -37,8 +37,8 @@ export default function EditBook() {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-50 px-4">
-      <div className="w-full max-w-lg bg-white p-8 rounded-xl shadow-lg">
+    <div className="min-h-screen flex items-center justify-center bg-[#67B2D8]/80 px-4">
+      <div className="w-full max-w-lg bg-white/50 p-8 rounded-xl shadow-lg">
         <h2 className="text-2xl font-semibold text-gray-800 mb-6 text-center">Edit Book</h2>
         <form onSubmit={submit} className="space-y-4">
           <input
@@ -65,7 +65,7 @@ export default function EditBook() {
           <button
             type="submit"
             disabled={loading}
-            className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-lg font-medium transition"
+            className="w-full bg-[#BF124D] hover:bg-[#76153C] text-white py-3 rounded-lg font-medium transition"
           >
             {loading ? "Updating..." : "Update"}
           </button>

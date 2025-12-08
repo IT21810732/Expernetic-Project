@@ -29,8 +29,8 @@ export default function Login() {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-50 px-4">
-      <div className="w-full max-w-md bg-white p-8 rounded-xl shadow-lg">
+    <div className="min-h-screen flex items-center justify-center bg-[#67B2D8]/80 px-4">
+      <div className="w-full max-w-md bg-white/50 p-8 rounded-xl shadow-lg">
         <h2 className="text-3xl font-semibold text-center mb-6 text-gray-800">
           Welcome
         </h2>
@@ -48,7 +48,7 @@ export default function Login() {
               required
               type="email"
               placeholder="example@gmail.com"
-              className="w-full mt-1 p-3 border rounded-lg outline-none focus:ring-2 focus:ring-green-500"
+              className="w-full mt-1 p-3 border rounded-lg outline-none"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
             />
@@ -60,14 +60,14 @@ export default function Login() {
               required
               type="password"
               placeholder="••••••••"
-              className="w-full mt-1 p-3 border rounded-lg outline-none focus:ring-2 focus:ring-green-500"
+              className="w-full mt-1 p-3 border rounded-lg outline-none"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
             />
           </div>
 
           <button
-            className="w-full bg-green-600 hover:bg-green-700 text-white py-3 rounded-lg transition font-medium"
+            className="w-full bg-[#BF124D] hover:bg-[#76153C] text-white py-3 rounded-lg transition font-medium"
             disabled={loading}
           >
             {loading ? "Signing in..." : "Login"}
@@ -76,7 +76,7 @@ export default function Login() {
 
         <p className="mt-4 text-center text-sm text-gray-600">
           Don't have an account?{" "}
-          <Link className="text-green-600 font-medium hover:underline" to="/register">
+          <Link className="text-[#BF124D] font-medium hover:underline" to="/register">
             Register
           </Link>
         </p>
