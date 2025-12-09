@@ -25,9 +25,11 @@ namespace backend.Controllers
             _config = config;
         }
 
+        //User registration 
         [HttpPost("register")]
         public async Task<IActionResult> Register(RegisterDto dto)
-        {
+        {   
+            //Check weather email is already in the use
             if (await _context.Users.AnyAsync(u => u.Email == dto.Email))
                 return BadRequest("Email already exists.");
 
@@ -36,7 +38,7 @@ namespace backend.Controllers
                 Email = dto.Email,
                 FullName = dto.FullName
             };
-            user.PasswordHash = _hasher.HashPassword(user, dto.Password);
+            user.PasswordHash = _hasher.HashPassword(user, dto.Password); //Hash password for enhance security
 
             _context.Users.Add(user);
             await _context.SaveChangesAsync();
@@ -44,6 +46,7 @@ namespace backend.Controllers
             return Ok(new { message = "User registered successfully" });
         }
 
+        //User Login
         [HttpPost("login")]
         public async Task<IActionResult> Login(LoginDto dto)
         {
@@ -57,6 +60,7 @@ namespace backend.Controllers
             return Ok(new { token });
         }
 
+        //JWT token generating
         private string GenerateToken(User user)
         {
             var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_config["Jwt:Key"]!));
